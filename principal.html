@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CURRÍCULO</title>
+    <style>
+        body {
+            background-image: url(fundo.jpeg);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+        }
+
+        #banner {
+            width: 100%;
+            height: 700px;
+            border: none;
+        }
+
+        .botoes {
+            display: flex;
+            padding-bottom: 50px;
+            text-align: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .botao {
+            width: 100px;
+            height: 50px;
+            border-radius: 7px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+
+        .botao:hover {
+            background-color: rgb(173, 173, 173);
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Currículo Pessoal</h1>
+        <div class="botoes">
+            <button class="botao" onclick="mudarPagina('sites/identificacao.html')">Identificação</button>
+            <button class="botao" onclick="mudarPagina('sites/formaçao.html')">Formação</button>
+            <button class="botao" onclick="mudarPagina('sites/experiencia.html')">Experiência Profissional</button>
+            <button class="botao" onclick="mudarPagina('sites/hobbies.html')">Hobbies</button>
+        </div>
+    </div>
+
+    <iframe id="banner" src="sites/identificacao.html"></iframe>
+
+    <script>
+        function mudarPagina(url) {
+            document.getElementById('banner').src = url;
+        }
+    </script>
+</body>
+</html>
